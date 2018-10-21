@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css"> 
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/sass/style.css"> 
+	<title>travel</title>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="logo"></div>
+			<nav class="menu">
+				<ul class="menu__wrap">
+					<a href="#"><li class="menu__item">Reality </li></a>
+					<a href="#"><li class="menu__item">Living </li></a>
+					<a href="#"><li class="menu__item">EduCation </li></a>
+					<a href="#"><li class="menu__item">Entertainment </li></a>
+					<a href="#"><li class="menu__item">Mobility</li></a>
+				</ul>
+			</nav>
+			<div class="search-login-container">
+				<a href="#" class="search-login-container__search"><i class="fas fa-search"></i></a>
+				<a href="#" class="search-login-container__login">Login</a>
+			</div>
+		</div>
+		<div class="form-wrapper">
+			<span class="question">What are you looking for?</span>
+			<form class="header-form" action="https://fom.in.ua">
+				<div class="aligner">
+					<select name="place" class="sel2">
+						<option value="dub"> Dubai</option>
+						<option value="odessa">Odessa</option>
+						<option value="odwew">UAE</option>
+						<option value="wewfwf">PIMP</option>
+						<option value="odwew">Mordovia</option>
+						<option value="wewfwf">Narnia</option>
+						<option value="odwew">Hogvarts</option>
+						<option value="wewfwf">Matrix</option>
+						<option value="wewfwf">Sparta</option>
+						<option value="wewfwf">Country of fucking things</option>
+					</select>
+				</div>
+
+				<div class="aligner2">
+					<select name="activity" class="sel2_2">
+						<option value="odessa"> Education</option>
+						<option value="odessa"> Sex tourism</option>
+						<option value="odessa"> Work</option>
+						<option value="odessa"> Relax</option>
+						<option value="odessa"> Migration</option>
+						<option value="odessa"> Terorism</option>
+						<option value="odessa"> Die</option>
+						<option value="odessa"> Kill da president</option>
+					</select>
+				</div>
+				<input type="text" class="header-input" placeholder="Keyword, name, date, ...">
+				<input type="button" class="button" value="Search">
+			</form>
+		</div>
+		<div class="ground-nav-panel">
+			<div class="ground-nav-panel__sort-section">
+				<a href="#" class="ground-nav-panel__sorting">Recommended</a>
+				<a href="#" class="ground-nav-panel__sorting">latest</a>
+				<a href="#" class="ground-nav-panel__sorting">Highlights</a>
+			</div>
+			
+			<div class="ground-wrap">
+				<select name="ground-select" class="ground-nav-panel__select" id="ground-select">
+					<option class="ground-nav-panel__select_item" value="">Dubai</option>
+					<option class="ground-nav-panel__select_item" value="">Shmubai</option>
+					<option class="ground-nav-panel__select_item" value="">Bolobai</option>
+					<option class="ground-nav-panel__select_item" value="">Uriupinsk</option>
+				</select>
+				<button class="ground-nav-panel__button">hide map</button>
+			</div>
+
+
+			<div class="ground-nav-panel__filter filter">
+				<span class="filter__title">Filter:</span>
+				<a href="#" class="filter__item home"></a>
+				<a href="#" class="filter__item people"></a>
+				<a href="#" class="filter__item education"></a>
+				<a href="#" class="filter__item music"></a>
+				<a href="#" class="filter__item transport"></a>
+			</div>
+		</div>
+	</header>
+	
+
+
+	<main>
+		<div class="main-wraper">
+			<div class="card-container">
+				<div class="card-container-item house">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-5" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-5"></label>
+
+						<input type="radio" id="star-4" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-4"></label>
+
+						<input type="radio" id="star-3" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-3"></label>
+
+						<input type="radio" id="star-2" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-2"></label>
+
+						<input type="radio" id="star-1" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-1"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i></a>
+
+					<div class="card-container-item__price house">$2,990</div>
+					<div class="card-container-item__logo house"></div>
+					<div class="card-container-item__title">2 bedroom house for rent in Dubai</div>
+					<a href="#" class="card-container-item__description house">Vision Agency</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating house">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(365)</div>
+					</div>
+				</div>
+
+
+				<div class="card-container-item party">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-6" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-6"></label>
+
+						<input type="radio" id="star-7" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-7"></label>
+
+						<input type="radio" id="star-8" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-8"></label>
+
+						<input type="radio" id="star-9" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-9"></label>
+
+						<input type="radio" id="star-10" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-10"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far 		fa-comments"></i>
+					</a>
+					<div class="card-container-item__price party">$2,990</div>
+					<div class="card-container-item__logo party"></div>
+					<div class="card-container-item__title">Beach party festival 2014</div>
+					<a href="#" class="card-container-item__description party">Long beach</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating party">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-item__votes">(1165)</div>
+					</div>
+				</div>
+			</div>
+	<!-- ------------------------------------------------------------------------------- -->
+
+			<div class="card-container">
+					<div class="card-container-item transport">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-11" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-11"></label>
+
+						<input type="radio" id="star-12" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-12"></label>
+
+						<input type="radio" id="star-13" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-13"></label>
+
+						<input type="radio" id="star-14" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-14"></label>
+
+						<input type="radio" id="star-15" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-15"></label>
+					</div>
+
+					<a href="#" class="card-container-item__comments"><i class="far 		fa-comments"></i>
+					</a>
+					<div class="card-container-item__price transport">$2,990</div>
+					<div class="card-container-item__logo transport"></div>
+					<div class="card-container-item__title">Aliquam quis pulvinar purus</div>
+					<a href="#" class="card-container-item__description transport">Bus Trans</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating transport">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(1165)</div>
+					</div>
+				</div>
+
+
+				<div class="card-container-item house">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-16" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-16"></label>
+
+						<input type="radio" id="star-17" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-17"></label>
+
+						<input type="radio" id="star-18" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-18"></label>
+
+						<input type="radio" id="star-19" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-19"></label>
+
+						<input type="radio" id="star-20" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-20"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="		far fa-comments"></i>
+					</a>
+					<div class="card-container-item__price house">$2,990</div>
+					<div class="card-container-item__logo house"></div>
+					<div class="card-container-item__title">2 bedroom house for rent in Dubai</div>
+					<a href="#" class="card-container-item__description house">Reality Agency</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating house">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-item__votes">(365)</div>
+					</div>
+				</div>
+			</div>
+
+	<!-- ------------------------------------------------------------------------------- -->
+
+			<div class="card-container solo">
+				<div class="card-container-wider-item ready">
+					<div class="grad">
+						<a href="#" class="card-container-wider-item__description ready">Vision Agency</a>	
+						<div class="card-container-wider-item__rating ready">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-wider-item__votes ready">(365)</div>
+						
+					</div>	
+					<div class="card-container-wider-item__logo house"></div>
+					<div class="review">
+						<div class="review__rating">
+							
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star "></i>
+
+						</div>
+						<a href="#" class="review__autor">Lucy-P</a>
+						<div class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#" class="read-more">...read more</a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-container solo">
+				<div class="card-container-wider-item danger">
+					<div class="grad danger">
+						<a href="#" class="card-container-wider-item__description danger">Skybox club</a>	
+						
+						<div class="card-container-wider-item__rating danger">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-wider-item__votes ready">(1365)</div>
+					
+					</div>	
+					<div class="card-container-wider-item__logo danger"></div>
+					<div class="review danger">
+						<div class="review__rating">
+							
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+
+						</div>
+						<a href="#" class="review__autor danger">Peter145</a>
+						<div class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#" class="read-more">...read more</a></div>
+					</div>
+				</div>
+			</div>
+			
+
+
+	<!-- ------------------------------------------------------------------------------ -->
+			<div class="card-container">
+				<div class="card-container-item house">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-21" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-21"></label>
+
+						<input type="radio" id="star-22" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-22"></label>
+
+						<input type="radio" id="star-23" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-23"></label>
+
+						<input type="radio" id="star-24" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-24"></label>
+
+						<input type="radio" id="star-25" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-25"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i></a>
+
+					<div class="card-container-item__price house">$2,990</div>
+					<div class="card-container-item__logo house"></div>
+					<div class="card-container-item__title">2 bedroom house for rent in Dubai</div>
+					<a href="#" class="card-container-item__description house">Vision Agency</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating house">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(365)</div>
+					</div>
+				</div>
+
+
+					<div class="card-container-item party">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+						<div class="card-container-item__rate-stars">	
+
+							<input type="radio" id="star-26" name="rating" class="card-container-item__star-item star-5">
+							<label title="Очень хорошо" for="star-26"></label>
+
+							<input type="radio" id="star-27" name="rating" class="card-container-item__star-item star-4">
+							<label title="Хорошо" for="star-27"></label>
+
+							<input type="radio" id="star-28" name="rating" class="card-container-item__star-item star-3">
+							<label title="Норм" for="star-28"></label>
+
+							<input type="radio" id="star-29" name="rating" class="card-container-item__star-item star-2">
+							<label title="Плохо" for="star-29"></label>
+
+							<input type="radio" id="star-30" name="rating" class="card-container-item__star-item star-1">
+							<label title="Очень плохо" for="star-30"></label>
+
+						</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i>
+					</a>
+					<div class="card-container-item__price party">$2,990</div>
+					<div class="card-container-item__logo party"></div>
+					<div class="card-container-item__title">Beach party festival 2014</div>
+					<a href="#" class="card-container-item__description party">Long beach</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating party">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(1165)</div>
+					</div>
+				</div>
+			</div>
+	<!-- ------------------------------------------------------------------------------- -->
+
+			<div class="card-container">
+					<div class="card-container-item transport">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-31" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-31"></label>
+
+						<input type="radio" id="star-32" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-32"></label>
+
+						<input type="radio" id="star-33" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-33"></label>
+
+						<input type="radio" id="star-34" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-34"></label>
+
+						<input type="radio" id="star-35" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-35"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i>
+					</a>
+					<div class="card-container-item__price transport">$2,990</div>
+					<div class="card-container-item__logo transport"></div>
+					<div class="card-container-item__title">Aliquam quis pulvinar purus</div>
+					<a href="#" class="card-container-item__description transport">Bus Trans</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating transport">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-item__votes">(1165)</div>
+					</div>
+				</div>
+
+
+				<div class="card-container-item house">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-36" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-36"></label>
+
+						<input type="radio" id="star-37" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-37"></label>
+
+						<input type="radio" id="star-38" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-38"></label>
+
+						<input type="radio" id="star-39" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-39"></label>
+
+						<input type="radio" id="star-40" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-40"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i>
+					</a>
+					<div class="card-container-item__price house">$2,990</div>
+					<div class="card-container-item__logo house"></div>
+					<div class="card-container-item__title">2 bedroom house for rent in Dubai</div>
+					<a href="#" class="card-container-item__description house">Reality Agency</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating house">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(365)</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container solo">
+				<div class="card-container-wider-item danger">
+					<div class="grad danger">
+						<a href="#" class="card-container-wider-item__description danger">Skybox club</a>	
+						
+						<div class="card-container-wider-item__rating danger">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-wider-item__votes ready">(1365)</div>
+						
+					</div>	
+					<div class="card-container-wider-item__logo danger"></div>
+					<div class="review danger">
+						<div class="review__rating">
+							
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+
+						</div>
+						<a href="#" class="review__autor danger">Peter145</a>
+						<div class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#" class="read-more">...read more</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-container-item house">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-41" name="rating" class="card-container-item__star-item star-5">
+						<label title="Очень хорошо" for="star-41"></label>
+
+						<input type="radio" id="star-42" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-42"></label>
+
+						<input type="radio" id="star-43" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-43"></label>
+
+						<input type="radio" id="star-44" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-44"></label>
+
+						<input type="radio" id="star-45" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-45"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far fa-comments"></i></a>
+
+					<div class="card-container-item__price house">$2,990</div>
+					<div class="card-container-item__logo house"></div>
+					<div class="card-container-item__title">2 bedroom house for rent in Dubai</div>
+					<a href="#" class="card-container-item__description house">Vision Agency</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating house">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="card-container-item__votes">(365)</div>
+					</div>
+				</div>
+				<div class="card-container-item party">
+					<button class="card-container-item__showmore">
+						<i class="fas fa-search"></i>
+						show more
+					</button>
+					<div class="card-container-item__rate-stars">	
+
+						<input type="radio" id="star-46" name="rating" class="card-container-item__star-item star-46">
+						<label title="Очень хорошо" for="star-5"></label>
+
+						<input type="radio" id="star-47" name="rating" class="card-container-item__star-item star-4">
+						<label title="Хорошо" for="star-47"></label>
+
+						<input type="radio" id="star-48" name="rating" class="card-container-item__star-item star-3">
+						<label title="Норм" for="star-48"></label>
+
+						<input type="radio" id="star-49" name="rating" class="card-container-item__star-item star-2">
+						<label title="Плохо" for="star-49"></label>
+
+						<input type="radio" id="star-50" name="rating" class="card-container-item__star-item star-1">
+						<label title="Очень плохо" for="star-50"></label>
+
+					</div>
+					<a href="#" class="card-container-item__comments"><i class="far 		fa-comments"></i>
+					</a>
+					<div class="card-container-item__price party">$2,990</div>
+					<div class="card-container-item__logo party"></div>
+					<div class="card-container-item__title">Beach party festival 2014</div>
+					<a href="#" class="card-container-item__description party">Long beach</a>	
+					<div class="rating-container">
+						<div class="card-container-item__rating party">
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+							<i class="fas fa-star checked"></i>
+						</div>
+						<div class="card-container-item__votes">(1165)</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="load-more">Load more &#8594;</a>
+		</div>
+	
+
+		<div class="offer">
+			
+			<span class="offer__title">What can DuHoot offer to you?</span>
+			<span class="offer__description">Etiam cursus ipsum quis enim faucibus</span>
+			<div class="offer__circle-section">
+				<a href="#"><div class="offer__item house"></div></a>
+				<a href="#"><div class="offer__item grl"></div></a>
+				<a href="#"><div class="offer__item educat"></div></a>
+				<a href="#"><div class="offer__item melod"></div></a>
+				<a href="#"><div class="offer__item bus"></div></a>
+			</div>
+			<span class="sub-title">Reality</span>
+			<div class="offer__card-block">
+
+				<div class="offer__card card-one">Cum sociis natoque penatibus et magnis dis parturient 		montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel 	dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.
+				</div>
+
+				<div class="offer__card card-two">Cum sociis natoque penatibus et magnis dis parturient 		montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel 	dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer>
+		<div class="footer">
+			<span class=" footer__title">Subscribe to our newsletter</span>
+			<form class="form">
+				<input type="text" class="footer__input" placeholder="your@email.com"/>
+				<input type="submit" class="button footer__button" value="Subscribe">
+			</form>
+		</div>
+
+		<div class="contacts">
+
+			<div class="container">
+				<h2 class="contacts__title">Ipsum quis</h2>
+				<ul class="contacts__list">
+					<a href="#"><li class="contacts__item">Aliquam quis</li></a>
+					<a href="#"><li class="contacts__item">Pulvinar purus</li></a>
+					<a href="#"><li class="contacts__item">Etiam cursus</li></a>
+					<a href="#"><li class="contacts__item">Ipsum quis</li></a>
+					<a href="#"><li class="contacts__item">Enim faucibus</li></a>
+				</ul>
+				
+			</div>
+
+			<div class="container">
+				<h2 class="contacts__title">Ipsum quis</h2>
+				<ul class="contacts__list">
+					<a href="#"><li class="contacts__item">Aliquam quis</li></a>
+					<a href="#"><li class="contacts__item">Pulvinar purus</li></a>
+					<a href="#"><li class="contacts__item">Etiam cursus</li></a>
+					<a href="#"><li class="contacts__item">Ipsum quis</li></a>
+					<a href="#"><li class="contacts__item">Enim faucibus</li></a>
+				</ul>
+				
+			</div>
+
+			<div class="container last">
+				<h2 class="contacts__title last">Follow us</h2>
+				<ul class="contacts__list social">
+					<a href="#">
+						<li class="contacts__item">
+							<i class="fab fa-facebook-f"></i>
+						</li>
+					</a>
+					<a href="#">
+						<li class="contacts__item">
+							<i class="fab fa-twitter"></i>
+						</li>
+					</a>
+					<a href="#">
+						<li class="contacts__item">
+							<i class="fab fa-google-plus-g"></i>
+						</li>
+					</a>
+					<a href="#">
+						<li class="contacts__item">
+							<i class="fab fa-youtube"></i>
+						</li>
+					</a>
+				</ul>
+				<span class="rights">Copyright © All Rights reserved</span>
+			</div>
+
+		</div>
+	</footer>
+
+
+
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.full.min.js"></script>
+	<script>
+		$(document).ready(function() {
+    $('.sel2').select2({
+    	dropdownCssClass:"seldd"
+
+    });
+});
+	</script>
+	<script>
+		$(document).ready(function() {
+    $('.sel2_2').select2({
+    	dropdownCssClass:"seldd"
+    });
+});
+	</script>
+	<script>
+		$(document).ready(function() {
+    $('.ground-nav-panel__select').select2({
+    	dropdownCssClass:"seld_2"
+    });
+});
+	</script>
+</body>
+</html>
