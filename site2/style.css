@@ -1,0 +1,881 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("fonts/subset-ProximaNova-Regular.eot");
+  src: url("fonts/subset-ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/subset-ProximaNova-Regular.woff2") format("woff2"), url("fonts/subset-ProximaNova-Regular.woff") format("woff"), url("fonts/subset-ProximaNova-Regular.ttf") format("truetype"), url("fonts/subset-ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova SB';
+  src: url("fonts/subset-ProximaNova-Semibold.eot");
+  src: url("fonts/subset-ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/subset-ProximaNova-Semibold.woff2") format("woff2"), url("fonts/subset-ProximaNova-Semibold.woff") format("woff"), url("fonts/subset-ProximaNova-Semibold.ttf") format("truetype"), url("fonts/subset-ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 10px; }
+
+header {
+  background: linear-gradient(to top, rgba(10, 14, 52, 0.9), rgba(10, 14, 52, 0.9)), url(imgs/football.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  header .wrap {
+    max-width: 2500px; }
+
+.wrap {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; }
+
+.logo {
+  background-image: url(imgs/logosmall.png);
+  background-repeat: no-repeat;
+  width: 137px;
+  height: 24px;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 140px; }
+
+.for {
+  display: none; }
+
+.line::before {
+  content: '';
+  top: 20%;
+  left: 17%;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  width: 194px;
+  height: 3px;
+  transform: rotate(-56deg);
+  background-color: #5d40ad; }
+
+.content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: "Proxima Nova";
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 31.32px;
+  text-transform: uppercase; }
+  .content__l-side {
+    align-self: flex-start;
+    margin-bottom: 30px; }
+  .content__r-side {
+    width: 80%;
+    align-self: flex-end;
+    margin-bottom: 140px; }
+
+.navigator {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 1000px; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .menu__item {
+    text-transform: uppercase;
+    margin-left: 14px;
+    margin-right: 19px;
+    color: #9071ea;
+    font-family: "Proxima Nova";
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 9px; }
+    .menu__item:hover a {
+      color: #fff; }
+    .menu__item a {
+      color: #9071ea; }
+
+.btn-block {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 46px; }
+
+.btn {
+  box-shadow: 0 16px 24px #0a0e34;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  transition: .1s;
+  box-sizing: border-box;
+  padding-left: 40px;
+  text-align: left;
+  width: 32%;
+  min-width: 138px;
+  height: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #5e42b0;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Proxima Nova";
+  font-size: 0.8rem;
+  font-weight: 300; }
+  .btn:hover {
+    background-color: #242d4a; }
+  .btn__get {
+    align-self: flex-start; }
+  .btn__sourse {
+    font-family: "Proxima Nova SB";
+    align-self: flex-start; }
+  .btn--apple {
+    margin-right: 10px; }
+    .btn--apple::before {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(imgs/Icon_-_Apple.png); }
+  .btn--google::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(imgs/Icon_-_Google_Play.png); }
+
+.athlets {
+  text-align: left;
+  position: relative; }
+  .athlets .wrap {
+    width: 100%; }
+  .athlets__man {
+    position: absolute;
+    width: 100%;
+    top: 64px;
+    z-index: 9;
+    height: 48%;
+    background-image: url(imgs/athletsml.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+
+.title {
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  color: #e7e7e7;
+  font-family: "Proxima Nova SB";
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase; }
+
+.sub_wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  justify-content: center;
+  background-color: #f5f4f9;
+  width: 100%;
+  position: relative; }
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  z-index: 8;
+  width: 100%;
+  max-width: 340px;
+  height: 250px;
+  overflow: hidden;
+  align-items: flex-start;
+  align-self: center; }
+
+.section {
+  padding-top: 60px;
+  align-self: stretch;
+  margin: 0px 50px 0px 50px;
+  width: 100%;
+  font-family: "Proxima Nova";
+  font-size: 1.5rem; }
+  .section__title {
+    color: #c1c1c1;
+    position: relative;
+    font-family: "Proxima Nova SB";
+    font-size: 2.8rem;
+    line-height: 34.49px;
+    text-transform: uppercase; }
+    .section__title::before {
+      top: 30px;
+      left: 0px;
+      content: '';
+      position: absolute;
+      display: block;
+      border-radius: 4px;
+      width: 14px;
+      height: 4px;
+      background-color: #5e42b0; }
+  .section__supper {
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+    color: #000;
+    vertical-align: super;
+    font-size: 1.3rem; }
+  .section__description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 18px;
+    width: 232px;
+    font-family: "Proxima Nova SB"; }
+
+.player {
+  position: relative; }
+  .player .wrap {
+    width: 100%; }
+  .player__man {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    z-index: 9;
+    height: 45%;
+    background-image: url(imgs/playersml.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+
+.pres-section {
+  width: 100%; }
+  .pres-section__img {
+    width: 100%;
+    height: 350px;
+    background-image: url(imgs/niggaS.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    .pres-section__img--second-img {
+      background-image: url(imgs/nigga2.png); }
+    .pres-section__img--third-img {
+      background-image: url(imgs/seminigga.png); }
+  .pres-section .wrap {
+    align-items: flex-start;
+    position: relative; }
+  .pres-section__rect {
+    top: -58px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #5e42b0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f5f6f7;
+    font-family: "Proxima Nova";
+    font-size: 14px; }
+    .pres-section__rect::after {
+      content: '';
+      margin-top: 3px;
+      display: block;
+      width: 16px;
+      height: 4px;
+      border-radius: 3px;
+      background-color: #8e7bc8; }
+  .pres-section__title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #e7e7e7;
+    font-family: "Proxima Nova SB";
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase; }
+  .pres-section__descript {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    line-height: 20px; }
+    .pres-section__descript::after {
+      content: '';
+      position: relative;
+      top: 30px;
+      display: block;
+      width: 22px;
+      height: 5px;
+      background-color: #5e3db3;
+      border-radius: 2px;
+      margin-bottom: 50px; }
+
+footer {
+  position: relative;
+  background-image: url(imgs/footerbg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  footer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    height: 9%;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(10, 14, 52, 0.7); }
+  footer .logo {
+    background-image: url(imgs/bluelogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 137px;
+    margin: 100px auto 20px;
+    width: 53%; }
+  footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    footer .content__r-side {
+      width: auto;
+      align-self: center;
+      font-size: 1.5rem;
+      color: #9b8ec1;
+      margin-bottom: 82px; }
+    footer .content__l-side {
+      position: relative;
+      margin-bottom: 0px;
+      width: auto;
+      align-self: center; }
+      footer .content__l-side::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        background-color: #936eea;
+        transform: rotate(-50deg);
+        height: 4px;
+        top: 26px;
+        left: -17px;
+        width: 88px; }
+      footer .content__l-side::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        background-color: #936eea;
+        transform: rotate(-50deg);
+        height: 4px;
+        width: 168px;
+        top: 31px;
+        right: 21px; }
+  footer .btn-block {
+    width: 100%;
+    margin-bottom: 146px; }
+
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 44%; }
+  .social__face {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(imgs/face.png); }
+  .social__twit {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(imgs/twit.png); }
+  .social__insta {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(imgs/insta.png); }
+
+.fscreen_info {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  flex-direction: row;
+  display: none;
+  color: #000; }
+  .fscreen_info .logo {
+    margin: 0px;
+    padding: 0px;
+    width: 70%;
+    height: 50%;
+    background-image: url(imgs/logosmall.png); }
+  .fscreen_info .contact {
+    font-family: "Proxima Nova";
+    color: #fff;
+    font-size: 2rem; }
+
+.band {
+  display: flex;
+  width: 100%;
+  transition: 0.6s; }
+
+input {
+  display: none; }
+
+#switch1:checked ~ .active .label:nth-child(1) {
+  background-color: #5c3caf; }
+
+#switch2:checked ~ .active .label:nth-child(2) {
+  background-color: #5c3caf; }
+
+#switch3:checked ~ .active .label:nth-child(3) {
+  background-color: #5c3caf; }
+
+#switch1:checked ~ .ovfl .band {
+  transform: translateX(0px); }
+
+#switch2:checked ~ .ovfl .band {
+  transform: translateX(-32%); }
+
+#switch3:checked ~ .ovfl .band {
+  transform: translateX(-69%); }
+
+#switch4:checked ~ .active .label:nth-child(1) {
+  background-color: #5c3caf; }
+
+#switch5:checked ~ .active .label:nth-child(2) {
+  background-color: #5c3caf; }
+
+#switch6:checked ~ .active .label:nth-child(3) {
+  background-color: #5c3caf; }
+
+#switch4:checked ~ .ovfl .band {
+  transform: translateX(0px); }
+
+#switch5:checked ~ .ovfl .band {
+  transform: translateX(-32%); }
+
+#switch6:checked ~ .ovfl .band {
+  transform: translateX(-69%); }
+
+.active {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60px;
+  height: 20px;
+  flex-direction: row;
+  align-self: center; }
+
+.label {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d8d8d8; }
+  .label:hover {
+    background-color: #5c3caf; }
+
+@media (min-width: 550px) {
+  .line::before {
+    width: 380px;
+    top: 25%;
+    left: 19%; }
+  .top-side {
+    padding-top: 52px;
+    margin-bottom: 195px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .logo {
+    background-image: url(imgs/logomid.png);
+    width: 189px;
+    height: 33px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .for {
+    color: #fff;
+    display: block;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    text-transform: uppercase; }
+  .content {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 6.4rem;
+    line-height: 64px;
+    letter-spacing: 3.2px; }
+    .content__r-side {
+      position: relative;
+      right: 60px;
+      width: 70%; }
+    .content__l-side {
+      position: relative;
+      left: 45px;
+      margin-bottom: 10px; }
+  .btn-block {
+    margin-bottom: 80px; }
+  .btn {
+    font-size: 1.4rem;
+    width: 311px;
+    height: 77px;
+    padding-left: 110px;
+    border-radius: 40px; }
+    .btn--apple::before {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 16px;
+      left: 50px;
+      background-image: url(imgs/applemid.png);
+      width: 33px;
+      height: 37px; }
+    .btn--google::before {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 20px;
+      left: 50px;
+      background-image: url(imgs/googlemid.png);
+      width: 33px;
+      height: 37px; }
+  .navigator {
+    display: flex;
+    flex-direction: column; }
+  .menu {
+    margin-bottom: 50px; }
+    .menu__item a {
+      font-size: 1.6rem; }
+  .title {
+    margin-top: 67px;
+    margin-bottom: 0px;
+    font-size: 9rem;
+    width: 50%;
+    float: right;
+    position: relative;
+    left: -100px; }
+  .athlets__man {
+    background-size: contain;
+    display: flex;
+    position: absolute;
+    background-image: url(imgs/athletmid.png);
+    width: 60%;
+    height: 700px;
+    left: -140px;
+    top: 49px; }
+  .athlets .sub_wrap {
+    margin-top: 0px; }
+  .band {
+    flex-direction: column; }
+  .active {
+    display: none; }
+  .slider {
+    background-color: #fff;
+    height: 100%;
+    max-width: 100%;
+    overflow: visible;
+    display: flex;
+    flex-direction: column; }
+  .section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 200px;
+    padding: 2% 0% 2% 0%;
+    margin: 0px; }
+    .section__title {
+      letter-spacing: 3px; }
+    .section:last-child .section__title::before {
+      background-color: #fff;
+      content: '';
+      display: block;
+      width: 14px;
+      height: 4px; }
+    .section--two {
+      background-color: #f5f4f9; }
+    .section--three {
+      background-color: #5e42b0;
+      color: #fff; }
+    .section__description {
+      font-size: 1.8rem;
+      width: 88%; }
+    .section__title {
+      margin-bottom: 20px;
+      font-size: 3.6rem; }
+  .aligner {
+    position: relative;
+    left: -100px;
+    width: 50%; }
+  .player {
+    overflow: hidden; }
+    .player__man {
+      background-image: url(imgs/playermid.png);
+      max-width: 665px;
+      top: -88px;
+      left: 45%;
+      z-index: 9;
+      height: 100%; }
+    .player .title {
+      margin-left: 0px;
+      float: left;
+      left: 4%; }
+    .player .section {
+      align-items: flex-start; }
+      .player .section:last-child {
+        background-color: #090c35; }
+      .player .section:last-child .section__supper {
+        color: #8765dd; }
+    .player .sub_wrap {
+      margin-top: 0px; }
+    .player .aligner {
+      left: 4%; }
+  .pres-section__img {
+    background-image: url(imgs/niggaL.png);
+    height: 584px; }
+    .pres-section__img--second-img {
+      background-image: url(imgs/nigga2L.png); }
+    .pres-section__img--third-img {
+      background-image: url(imgs/seminiggaL.png); }
+  .pres-section__content {
+    padding-bottom: 60px; }
+  .pres-section__rect {
+    top: -93px;
+    width: 117px;
+    height: 117px;
+    font-size: 2.4rem; }
+    .pres-section__rect::after {
+      width: 22px;
+      height: 5px; }
+  .pres-section__title {
+    margin-top: 60px;
+    font-size: 9rem; }
+  .pres-section__descript {
+    line-height: 25px;
+    font-size: 2.4rem;
+    width: 75%; }
+  .ovfl {
+    width: 100%; }
+  footer {
+    background-image: url(imgs/footerbgL.png); }
+    footer .logo {
+      margin: 130px auto 100px;
+      background-image: url(imgs/footerlogoL.png);
+      background-size: contain;
+      width: 130px;
+      height: 137px; }
+    footer .wrap {
+      display: flex; }
+    footer .aligner-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    footer .content {
+      margin-bottom: 64px; }
+      footer .content__l-side {
+        left: 0px;
+        font-size: 8rem; }
+        footer .content__l-side::before {
+          width: 177px;
+          top: 49px;
+          left: -3px;
+          height: 5px; }
+        footer .content__l-side::after {
+          top: 49px;
+          right: 71px;
+          width: 325px;
+          height: 5px; }
+      footer .content__r-side {
+        font-size: 3.6rem;
+        width: 100%;
+        left: 0px;
+        letter-spacing: 0px; }
+  .social {
+    position: relative;
+    margin-bottom: 34px;
+    width: 20%;
+    z-index: 1; }
+    .social__face {
+      width: 27px;
+      height: 27px;
+      background-image: url(imgs/faceL.png); }
+    .social__twit {
+      width: 27px;
+      height: 27px;
+      background-image: url(imgs/twitL.png); }
+    .social__insta {
+      width: 27px;
+      height: 27px;
+      background-image: url(imgs/instaL.png); } }
+
+@media (min-width: 1300px) {
+  .btn-block {
+    justify-content: center;
+    margin-bottom: 100px; }
+  .btn--apple {
+    margin-right: 50px; }
+  .player .title {
+    padding-left: 12%; }
+  .player .section {
+    box-sizing: border-box;
+    padding-left: 12%; }
+  .section__description {
+    max-width: 70%; } }
+
+@media (min-width: 1920px) {
+  header {
+    background: linear-gradient(to top, rgba(10, 14, 52, 0.9), rgba(10, 14, 52, 0.9)), url(imgs/football.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .top-side {
+    margin-bottom: 309px; }
+  .wrap {
+    width: 80%; }
+  .navigator {
+    max-width: none; }
+  .line::before {
+    left: 23%;
+    height: 7px;
+    width: 447px;
+    top: 46%; }
+  .content {
+    margin-bottom: 200px;
+    font-size: 9rem; }
+    .content__l-side {
+      left: 0px;
+      margin-bottom: 30px; }
+    .content__r-side {
+      width: auto;
+      margin-bottom: 0px;
+      right: 0px; }
+  .menu {
+    align-self: flex-end;
+    position: relative;
+    top: -180px; }
+  .btn-block {
+    justify-content: center;
+    margin-bottom: 100px; }
+  .btn--apple {
+    margin-right: 50px; }
+  .athlets__man {
+    background-image: url(imgs/athletXL.png);
+    width: 60%;
+    height: 118%;
+    left: -140px;
+    top: -17px; }
+  .section {
+    min-height: 300px;
+    padding: 2% 0% 2% 0%; }
+    .section__description {
+      width: 52%; }
+  .title {
+    margin-top: 135px; }
+  .player {
+    overflow: visible; }
+    .player__man {
+      background-image: url(imgs/playerXL.png);
+      max-width: 59%;
+      top: -97px;
+      left: 38%;
+      height: 99%; }
+    .player .title {
+      left: 18%;
+      padding-left: 0%; }
+    .player .section {
+      padding-left: 0%; }
+      .player .section .aligner {
+        left: 18%; }
+  .precepts {
+    display: flex;
+    flex-direction: column; }
+  .pres-section {
+    position: relative;
+    height: 730px;
+    display: flex;
+    align-items: center; }
+    .pres-section:nth-child(odd) {
+      display: flex;
+      flex-direction: row; }
+    .pres-section:nth-child(2n) {
+      display: flex;
+      flex-direction: row-reverse; }
+    .pres-section__rect {
+      top: 28%;
+      left: calc(50% - 59px); }
+    .pres-section__img {
+      height: 100%;
+      flex-basis: 50%; }
+    .pres-section__content {
+      flex-basis: 50%; }
+    .pres-section__title {
+      margin-bottom: 10%; }
+    .pres-section__descript {
+      width: 50%; }
+    .pres-section .wrap {
+      text-align: left;
+      position: static; }
+  footer .content {
+    margin: 0px; }
+    footer .content__r-side {
+      text-align: center; }
+  footer .wrap {
+    width: 80%; }
+  footer .screen_logo {
+    background-image: url(imgs/logomid.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 40px; }
+  footer .aligner-footer {
+    margin-top: 250px;
+    position: relative;
+    left: 0%;
+    display: flex;
+    width: 990px;
+    margin-bottom: 150px; }
+  footer .fscreen_info {
+    width: 90%;
+    display: flex;
+    justify-content: space-between; }
+  footer .logo {
+    width: 8%;
+    left: 50px;
+    position: relative;
+    margin: 0px;
+    top: 122px; } }
