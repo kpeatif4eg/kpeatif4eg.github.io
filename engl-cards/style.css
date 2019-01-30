@@ -191,3 +191,15 @@
     border-left: 1px solid #bba63a;
     outline: 0;
 	}
+	@media (min-width: 300px ) and ( max-width: 400px){
+		.owfl{
+			right: -2%;
+		}
+		.place{
+			margin-top: 20px
+		}
+		.card{
+			width: 150px;
+			height: 260px;
+		}
+	}
