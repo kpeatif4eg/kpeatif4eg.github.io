@@ -170,7 +170,7 @@
 	.contain_alphabet .check{
 		transition: .8s;
 		border-radius: 50%;
-		background-color: rgba(74,74,6,.6) !important;
+		background-color: rgba(177, 177, 15, 0.55) !important;
 	}
 	.part_number.check{
 		background-color: #e6790d;
@@ -191,6 +191,33 @@
     border-left: 1px solid #bba63a;
     outline: 0;
 	}
+	.info{
+		font-size: 10px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30px;
+		height: 30px;
+		border-radius: 4px;
+		text-align: center;
+		background-color: rgba(111,111,111,.6);
+	}
+	.popup{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #fff;
+		padding: 0 30px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(100,100,100,.4);
+	}
+	.none{
+		display: none;
+	}
 	@media (min-width: 300px ) and ( max-width: 400px){
 		.owfl{
 			right: -2%;
@@ -201,5 +228,6 @@
 		.card{
 			width: 150px;
 			height: 260px;
+			font-size: 21px;
 		}
 	}

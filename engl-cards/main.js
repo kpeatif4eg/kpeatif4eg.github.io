@@ -267,4 +267,11 @@ $('.alphabet').on('click', function(e){
 	makeAlphabet(sources.globalArray);
 	if (isAlphabet) {isAlphabet = false ;$('.alpha').remove()}
 	else{isAlphabet = true;}
+});
+
+$('.info').on('click', function(){
+	$('.popup').removeClass('none');
+});
+$('.fck_you').on('click', function(){
+	$('.popup').addClass('none');
 })
