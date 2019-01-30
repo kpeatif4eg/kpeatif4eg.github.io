@@ -5,128 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
-	<style type="text/css">
-		body{
-			background-color:  black;
-		}
-		.place{
-			box-shadow: inset 3px 14px 20px 30px rgba(0,0,0,1);
-			transition: 1s;
-			border: 1px solid black;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0 auto;
-			max-width: 700px;
-			width: 100%;
-						
-			    background-image: url(20.jpg);
-			    background-position: center;
-			    background-size: cover;
-			    background-repeat: no-repeat;
-			
-			height: 400px;
-			perspective-origin: center center;
-			perspective: 800px;
-		}
-		.card{
-			font-family: 'PT Sans';
-			font-size: 27px;
-			z-index: 2;
-			box-shadow: 3px 14px 200px -17px rgba(0,0,0,0.75);
-			transition: 1s;
-			display: flex;
-			/*transform: scale(0); */
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: center;
-			border: 1px solid gray;
-			width: 200px;
-			height: 300px;
-			background-color: rgba(238, 231,144,.22);
-			transform-origin:center center;
-		}
-		.animation{
-		  animation: aimnCard linear 12s;
-		  animation-iteration-count: infinite;
-		  transform-origin: 50% 50%;
-		  -webkit-animation: aimnCard linear 6s;
-		  -webkit-animation-iteration-count: infinite;
-		  -webkit-transform-origin: 50% 50%;
-		  -moz-animation: aimnCard linear 4s;
-		  -moz-animation-iteration-count: infinite;
-		  -moz-transform-origin: 50% 50%;
-		  -o-animation: aimnCard linear 4s;
-		  -o-animation-iteration-count: infinite;
-		  -o-transform-origin: 50% 50%;
-		  -ms-animation: aimnCard linear 4s;
-		  -ms-animation-iteration-count: infinite;
-		  -ms-transform-origin: 50% 50%;
-		}
-
-		/*.place:hover .card{	
-			transition: 1s;
-			transform:scale(1);
-			animation: animCard;
-			animation-duration: 2s;
-			transform: rotateY(180deg);
-		}*/
-		@keyframes aimnCard{
-				0% {
-			    transform:  translate(0px,1px)  rotate(0deg);
-			  }
-			  11% {
-			    transform:  translate(0px,5px)  rotate(-2deg);
-			  }
-			  29% {
-			    transform:  translate(0px,-4px)  rotate(0deg);
-			  }
-			  50% {
-			    transform:  translate(1px,-5px)  rotate(4deg);
-			  }
-			  67% {
-			    transform:  translate(1px,2px)  rotate(1deg);
-			  }
-			  84% {
-			    transform:  translate(1px,5px)  rotate(-2deg);
-			  }
-			  100% {
-			    transform:  translate(0px,1px)  rotate(0deg);
-			  }
-		}
-		.rotate{
-			transform: rotateY(360deg);
-			
-			transition: .5s;
-		}
-		.container-card{
-			transition: .5s;
-		}
-		.translate{
-			text-align: center;
-		}
-		.stopped{
-			animation-play-state: paused;
-		}
-		.back{
-		  position: absolute;
-		  z-index: 0;
-}
-	.str{
-		text-shadow: 0px 0px 7px rgb(10, 10, 10);
-    color: #fbe468;
-	}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="place">
+		<div class="contain_buttons">
+			<button class="part">Сорт. частями</button>
+			<button class="alphabet">Сорт. по алфавиту</button>
+		</div>
+		<div class="contain_parts"></div>
 		<div class="container-card">
 			<div class="card animation">	
 				<div class="origin str"></div>
 				<div class="transcript str"></div>
 				<div class="translate str">someword</div>
 			</div>
+		</div>
+		<div class="owfl">
+			<div class="contain_alphabet"></div>
 		</div>
 		<!-- <div class="card back"></div> -->
 
@@ -148,7 +44,10 @@
 
 
 
-<script type="text/template" id="list">	 a	 [ə]		 неопределенный артикль, один из			
+<script type="text/javascript" src='sorting.js'></script>
+
+<script type="text/template" id="list">	 
+	 a	 [ə]		 неопределенный артикль, один из			
  	 ability		 [əˈbɪləti]		 способность, умение			
  	 able		 [ˈeɪbl]		 способный, обладающий способностью			
  	 about		 [əˈbaʊt]		 насчет, на тему, повсюду			
@@ -651,7 +550,7 @@
  	 drunk		 [drʌŋk]		 пьяный			
  	 dry		 [draɪ]		 сухой, сушить(ся)			
  	 duck		 [dʌk]		 утка			
- 	 due		 [duː]		 (+ to) обусловленный, должный			
+ 	 due		 [duː]		 обусловленный, должный			
  	 dull		 [dʌl]		 тупой, глупый			
  	 during		 [ˈdʊrɪŋ]		 во время, в течение			
  	 dust		 [dʌst]		 пыль, вытирать пыль			
@@ -1149,8 +1048,8 @@
  	 material		 [məˈtɪriəl]		 материал, вещество, материальный			
  	 mathematics		 [ˌmæθəˈmætɪks]		 математика			
  	 matter		 [ˈmætər]		 вещество, вопрос, иметь значение			
- 	 may		 [meɪ]		 быть вероятным, мочь			
- 	 May		 [meɪ]		 май			
+ 	 may		 [meɪ]		 быть вероятным, мочь, май		
+ 		
  	 maybe		 [ˈmeɪbi]		 может быть			
  	 meal		 [miːl]		 принятие пищи, еда			
  	 mean		 [miːn]		 иметь в виду, подразумевать, неприятный			
@@ -1209,8 +1108,7 @@
  	 mouth		 [maʊθ]		 рот			
  	 move		 [muːv]		 передвигать, двигаться, движение			
  	 movement		 [ˈmuːvmənt]		 движение			
- 	 movie		 [ˈmuːvi]		 кино, фильм			
- 	 movie		 [ˈmuːvi]		 кино			
+ 	 movie		 [ˈmuːvi]		 кино, фильм						
  	 much		 [mʌtʃ]		 весьма, очень			
  	 mud		 [mʌd]		 грязь			
  	 multiply		 [ˈmʌltɪplaɪ]		 умножать(ся), увеличивать(ся)			
@@ -1321,7 +1219,7 @@
  	 origin		 [ˈɔːrɪdʒɪn]		 начало, происхождение			
  	 original		 [əˈrɪdʒənl]		 оригинальный, первоначальный , оригинал			
  	 other		 [ˈʌðər]		 другой, иной, другой			
- 	 ought		 [ˈɔt ]		 (+ to) должен			
+ 	 ought(to)		 [ˈɔt ]		 должен			
  	 ourselves		 [ɑːrˈselvz,aʊər-]		 себя, собой			
  	 out		 [aʊt]		 вне, снаружи, из			
  	 outdoor		 [ˈaʊtdɔːr]		 наружный, внешний			
@@ -1437,7 +1335,7 @@
  	 post		 [poʊst]		 почта, пост, вывешивать			
  	 pot		 [pɑːt]		 горшок, кастрюля			
  	 potato		 [pəˈteɪtoʊ]		 картофель			
- 	 pound		 [paʊnd]		 фунт (453,6 г), фунт стерлингов			
+ 	 pound		 [paʊnd]		 фунт(вес), фунт стерлингов			
  	 pour		 [pɔːr]		 лить(ся), наливать			
  	 powder		 [ˈpaʊdər]		 порошок, пудра			
  	 power		 [ˈpaʊər]		 сила, мощь, питать энергией			
@@ -1488,7 +1386,7 @@
  	 proposal		 [prəˈpoʊzl]		 предложение			
  	 protect		 [prəˈtekt]		 защищать, охранять			
  	 protection		 [prəˈtekʃn]		 защита			
- 	 protest		 [n-ˈproʊtest, v-prəˈtest]		 протест, протестовать			
+ 	 protest		 [n-ˈproʊtest,v-prəˈtest]		 протест, протестовать			
  	 proud		 [praʊd]		 гордый			
  	 prove		 [pruːv]		 доказывать			
  	 provide		 [prəˈvaɪd]		 снабжать, предоставлять			
@@ -1584,7 +1482,7 @@
  	 reward		 [rɪˈwɔːrd]		 награда, вознаграждение, вознаграждать			
  	 rice		 [raɪs]		 рис			
  	 rich		 [rɪtʃ]		 богатый			
- 	 rid		 [rɪd]		 (+ of) освобождать, избавлять			
+ 	 rid		 [rɪd]		  освобождать, избавлять			
  	 ride		 [raɪd]		 ездить, кататься, езда			
  	 right		 [raɪt]		 правый, правильный, право			
  	 ring		 [rɪŋ]		 кольцо, звон, звонить			
@@ -1655,7 +1553,7 @@
  	 sensible		 [ˈsensəbl]		 разумный, здравомыслящий			
  	 sensitive		 [ˈsensətɪv]		 чувствительный			
  	 sentence		 [ˈsentəns]		 предложение, приговор			
- 	 separate		 [j-ˈseprət, v-ˈsepəreɪt]		 отдельный, отделять			
+ 	 separate		 [j-ˈseprət,v-ˈsepəreɪt]		 отдельный, отделять			
  	 September		 [sepˈtembər]		 сентябрь			
  	 series		 [ˈsɪriːz]		 ряд, последовательность			
  	 serious		 [ˈsɪriəs]		 серьезный			
@@ -1667,7 +1565,7 @@
  	 settle		 [ˈsetl]		 урегулировать, улаживать			
  	 seven		 [ˈsevn]		 семь, семерка			
  	 seventeen		 [ˌsevnˈtiːn]		 семнадцать			
- 	 seventy		 [ˈsevnti]		 семьдесят, 70			
+ 	 seventy		 [ˈsevnti]		 семьдесят,		
  	 several		 [ˈsevrəl]		 несколько, несколько			
  	 severe		 [sɪˈvɪr]		 суровый, серьезный			
  	 sew		 [soʊ]		 шить, зашивать			
@@ -1727,7 +1625,7 @@
  	 situation		 [ˌsɪtʃuˈeɪʃn]		 ситуация			
  	 six		 [sɪks]		 шесть			
  	 sixteen		 [ˌsɪksˈtiːn]		 шестнадцать			
- 	 sixty		 [ˈsɪksti]		 шестьдесят, 60			
+ 	 sixty		 [ˈsɪksti]		 шестьдесят		
  	 size		 [saɪz]		 размер			
  	 skill		 [skɪl]		 умение, навык			
  	 skillful		 [ˈskɪlfl]		 искусный, умелый			
@@ -1891,7 +1789,7 @@
  	 teach		 [tiːtʃ]		 учить, обучать			
  	 teacher		 [ˈtiːtʃər]		 учитель			
  	 team		 [tiːm]		 команда, объединяться в команду			
- 	 tear		 [n-tɪr, v-ter]		 рвать(ся), разрывать(ся), слеза			
+ 	 tear		 [n-tɪr,v-ter]		 рвать(ся), разрывать(ся), слеза			
  	 technical		 [ˈteknɪkl]		 технический			
  	 telephone		 [ˈtelɪfoʊn]		 телефон, звонить по телефону			
  	 television		 [ˈtelɪvɪʒn]		 телевидение, телевизор			
@@ -1931,8 +1829,7 @@
  	 though		 [ðoʊ]		 хотя, несмотря на, тем не менее			
  	 thought		 [θɔːt]		 мысль			
  	 thousand		 [ˈθaʊznd]		 тысяча, тысяча			
- 	 thread		 [θred]		 нить			
- 	 threat		 [θret]		 угроза			
+ 	 thread		 [θred]		 нить				
  	 threat		 [θret]		 угроза			
  	 threaten		 [ˈθretn]		 угрожать			
  	 three		 [θriː]		 три			
@@ -1997,7 +1894,7 @@
  	 Tuesday		 [ˈtuːzd(e)ɪ]		 вторник			
  	 tune		 [tuːn]		 мелодия			
  	 turn		 [tɜːrn]		 поворачивать, поворачиваться, поворачивание			
- 	 TV		 [ˌtiː ˈviː]		 телевидение, телевизор			
+ 	 TV		 [ˌtiːˈviː]		 телевидение, телевизор			
  	 twelve		 [twelv]		 двенадцать			
  	 twenty		 [ˈtwenti]		 двадцать			
  	 twice		 [twaɪs]		 дважды			

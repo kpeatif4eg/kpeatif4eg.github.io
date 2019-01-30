@@ -1,0 +1,193 @@
+		body{
+			background-color:  black;
+		}
+		.active{
+			background-color: green;
+		}
+		.place{
+			position: relative;
+			box-shadow: inset 3px 14px 20px 30px rgba(0,0,0,1);
+			transition: 1s;
+			border: 1px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			max-width: 700px;
+			width: 100%;
+						
+		    background-image: url(20.jpg);
+		    background-position: center;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+			
+			height: 400px;
+			perspective-origin: center center;
+			perspective: 800px;
+		}
+		.card{
+			font-family: 'PT Sans';
+			font-size: 27px;
+			z-index: 2;
+			box-shadow: 3px 14px 200px -17px rgba(0,0,0,0.75);
+			transition: 1s;
+			display: flex;
+			/*transform: scale(0); */
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			border: 1px solid gray;
+			width: 200px;
+			height: 300px;
+			background-color: rgba(238, 231,144,.22);
+			transform-origin:center center;
+		}
+		.animation{
+		  animation: animCard linear 12s;
+		  animation-iteration-count: infinite;
+		  transform-origin: 50% 50%;
+		  -webkit-animation: animCard linear 6s;
+		  -webkit-animation-iteration-count: infinite;
+		  -webkit-transform-origin: 50% 50%;
+		  -moz-animation: animCard linear 4s;
+		  -moz-animation-iteration-count: infinite;
+		  -moz-transform-origin: 50% 50%;
+		  -o-animation: animCard linear 4s;
+		  -o-animation-iteration-count: infinite;
+		  -o-transform-origin: 50% 50%;
+		  -ms-animation: animCard linear 4s;
+		  -ms-animation-iteration-count: infinite;
+		  -ms-transform-origin: 50% 50%;
+		}
+
+		/*.place:hover .card{	
+			transition: 1s;
+			transform:scale(1);
+			animation: animCard;
+			animation-duration: 2s;
+			transform: rotateY(180deg);
+		}*/
+		@keyframes animCard{
+				0% {
+			    transform:  translate(0px,1px)  rotate(0deg);
+			  }
+			  11% {
+			    transform:  translate(0px,5px)  rotate(-2deg);
+			  }
+			  29% {
+			    transform:  translate(0px,-4px)  rotate(0deg);
+			  }
+			  50% {
+			    transform:  translate(1px,-5px)  rotate(4deg);
+			  }
+			  67% {
+			    transform:  translate(1px,2px)  rotate(1deg);
+			  }
+			  84% {
+			    transform:  translate(1px,5px)  rotate(-2deg);
+			  }
+			  100% {
+			    transform:  translate(0px,1px)  rotate(0deg);
+			  }
+		}
+		.rotate{
+			transform: rotateY(360deg);
+			
+			transition: .5s;
+		}
+		.container-card{
+			transition: .5s;
+		}
+		.translate{
+			text-align: center;
+		}
+		.stopped{
+			animation-play-state: paused;
+		}
+		.back{
+		  position: absolute;
+		  z-index: 0;
+}
+	.str{
+		text-shadow: 0px 0px 7px rgb(10, 10, 10);
+    color: #fbe468;
+	}
+	
+	.part, .alphabet{
+		background-color: transparent;
+		color: #fff;
+		border: 1px solid gray;
+	}
+	.alphabet{
+		position: relative;
+		top: -1px;
+		
+	}
+	.contain_buttons, .contain_parts, .owfl{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+	}
+	.contain_parts{
+		top: 20%;
+		left: 0;
+	}
+	.contain_buttons{
+		top: 0;
+		left: 0;
+	}
+	.owfl{
+		position: absolute;
+		overflow: scroll;
+	    width: 50px;
+	    height: 130px;	
+	    top: 40%;
+	    right: 5%;
+
+
+	}
+	.owfl::-webkit-scrollbar {
+		width: 0;
+	}
+	.contain_alphabet{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.contain_alphabet button{
+		outline: 0;
+		color: #FFFFFF;
+		font-size: 18px;
+		background: #232323;
+		text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ffdc18, 0 0 30px #ffdc18, 0 0 15px #ffdc18, 0 0 15px #ffdc18, 0 0 15px #ffdc18;
+		border: 0;
+		background-color: rgba(0,0,0,0);
+		height: 40px;
+		width: 40px;
+	}
+	.contain_alphabet .check{
+		transition: .8s;
+		border-radius: 50%;
+		background-color: rgba(74,74,6,.6) !important;
+	}
+	.part_number.check{
+		background-color: #e6790d;
+		color: #000;
+		transition: .5s;
+	}
+	.part_number{
+	font-size: 16px;
+    color: lightsteelblue;
+   
+    background-color: black;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 2px;
+    padding: 1px;
+    border-bottom: 1px solid #908535;
+    border-right: 1px solid #675f20;
+    border-left: 1px solid #bba63a;
+    outline: 0;
+	}

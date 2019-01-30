@@ -10,25 +10,32 @@ class Vocabulary{
 		this.array = [];
 		
 	}
-	set grub(value){
-		[this.word, this.translation ] = value;
+
+}
+
+
+var sources = {
+	globalArray:[],
+	currentArr:[],
+
+	part:{
+		mainArr:[]
 		
-	}
-	get grub(){
-		return `${this.word} ${this.translation}`
+	},
+	alpha: {
+		mainArr:[]
 	}
 }
 
 
-
-var globalArray;
+// var sources.globalArray;
 
 // var xhr = new XMLHttpRequest();
 
 // xhr.open('GET','text.json', true);
 // xhr.send();
 	
-// var globalArray;
+// var sources.globalArray;
 
 // xhr.onreadystatechange = function(){
 
@@ -38,19 +45,19 @@ var globalArray;
 // 		// console.log(page);
 // 		// document.body.innerHTML = page;	
 
-// 		globalArray = buildObject(page);
+// 		sources.globalArray = buildObject(page);
 
-// 		render(globalArray);
+// 		makeRandom(sources.globalArray);
 		
 // 		console.log(xhr.readyState);
 // 	}
 
 // }
 
-
-var page = $('#list').text();
-globalArray = buildObject(page);
-render(globalArray);
+	
+var page = $('#list').text();    						 //получаем исоодный словарь
+sources.globalArray = buildObject(page);
+makeRandom(sources.globalArray,);
 
 
 function buildObject(text){
@@ -58,24 +65,23 @@ function buildObject(text){
 	let newArray = [];
 	var vocab;
 
-	text.split(' ')					//форматируем исходный словарь
+	text.split(' ')										//форматируем исходный словарь
 	.map(function(item){
 
 		return item.trim();})
 
 	.forEach(function(item ,index) {
 		
-
 		if(!(item === '')){
 			newArray.push(item);
 		}
 		
 	});
 	 	
-	for(var i = 0; i < newArray.length; i++){		// в цикле отдельно вытягиваем латинские и кирилические слова через конструктор в массив
+	for(var i = 0; i < newArray.length; i++){							// в цикле отдельно вытягиваем латинские и кирилические слова через конструктор в массив
 		var j;
 
-	 	j===undefined ? '': i = j ;						// проверка на второе (и далее) вхождение цикла
+	 	j===undefined ? '': i = j ;											// проверка на второе (и далее) вхождение цикла
 	 	if (i >= newArray.length) {
 	 		break
 	 	}
@@ -83,11 +89,11 @@ function buildObject(text){
 		let eng = /\w+/;
 		var word = '';
 		var sumStringTranslation = '';
-		var trancript = '';	
+		var trancript = '';
 
-		if(eng.test(newArray[i])){		//вытягиваем латинские слова
+		if(eng.test(newArray[i])){											//вытягиваем латинские слова
 
-			word = newArray[i];
+			word = newArray[i].toLowerCase();
 
 			// console.log(word);
 
@@ -97,10 +103,8 @@ function buildObject(text){
 		
 		 j = i+2;	
 		
-
-			for(; !(eng.test(newArray[j])) ;j++){		//конкатенируем кирилические слова (перевод)
-				
-				
+			for(; !(eng.test(newArray[j])) ;j++){							//вытягиваем и конкатенируем кирилические слова (перевод)
+								
 				sumStringTranslation += newArray[j] + ' ';
 			
 			}	
@@ -108,29 +112,64 @@ function buildObject(text){
 
 		vocab = new Vocabulary(word, sumStringTranslation, trancript);
 				
-		arr.push(vocab);  //добавляем объект конструктора в массив
+		arr.push(vocab); 														 //добавляем объект конструктора в массив
 			
 	}
 	return arr;
 }	
 
 
+function mainRender(obj){
 
-function render(arr){
+			var changeWord = '';
+
+			for(var i = 0; i<(obj.word).length; i++){
+				if (i === 0) {
+					changeWord = obj.word[i].toUpperCase();
+					i++;
+				}
+				changeWord += obj.word[i];
+			}
+	$('.origin').text(changeWord);
+	$('.translate').text(obj.translation);
+	$('.transcript').text(obj.transcription);
+}
+
+
+function makeRandom(arr){					//работает по умолчанию
 	var rand = randomizer(0, arr.length);
-
-
 
 	arr.forEach(function(item, index){
 		if(index === rand){
-			$('.origin').text(item.word);
-			$('.translate').text(item.translation);
-			$('.transcript').text(item.transcription);	
 
-			getImg(item.word);		
+			mainRender(item);
 		}
-	})
+	});
 }
+
+function makePartition(arr){									//разбиваем массив объектов на части
+
+	var numbOfPieces = 10;
+	var rangeValue = arr.length/numbOfPieces;	
+	var arrayForArrays = [];
+		var newArr = [];
+		var i = 0;
+	
+		for (var j = 0 ; j < arr.length; j+=rangeValue) {
+			newArr[i] = arr.slice(j, j + rangeValue);
+			i++;
+		}
+		
+		
+		sources.part.mainArr = newArr;
+
+
+		var ponyArr = newArr.slice();
+		
+		console.log(ponyArr);
+		elemenCreator(sources.part.mainArr, 'partition')
+}
+
 
 function randomizer(min, max) {
     var rand = min + Math.random() * (max + 1 - min);
@@ -138,8 +177,58 @@ function randomizer(min, max) {
     return rand;
   }
 
+  function elemenCreator(arr ,type){
+
+  		if (type === 'partition') {
+  			$('.alpha').remove();
+  		
+  			arr.forEach(function(item, index){
+  				$('<button class="part_number">'+(index+1)+'</button>')
+  				.on('click',function(){
+
+  					sources.currentArr = arr[(this.innerText) - 1];
+  					if($('button:has(check)')){
+  						$('.contain_parts button').removeClass('check');
+  					}
+  					$(this).toggleClass('check');
+  					console.log((this.innerText))
+  				})
+  				.appendTo($('.contain_parts'));
+  				
+  			})
+  		}
+  		else if(type === 'alphabet'){
+  			$('.part_number').remove();
+  			
+  			arr.forEach(function(item, index){
+  				$('<button class="alpha">'+(item[0].word[0])+'</button>')
+  				.attr('numb',index)
+  				.on('click',function(){
+  					sources.currentArr = arr[(this.getAttribute('numb'))];
+
+  					if($('button:has(check)')){
+  						$('.contain_alphabet button').removeClass('check');
+  					}
+  					$(this).toggleClass('check');
+
+  					console.log(this.getAttribute('numb'))
+  				})
+  				.appendTo($('.contain_alphabet'));
+  			})
+  		}
+  }
+
+
+
+
+//EVENTS
+	
+	var isPart = false;
+	var isAlphabet = false;
 
   	var rotateValue = 0;
+
+
   $('.container-card').	on('click', function(e){
 
   	e.currentTarget.style = ('transform: rotateY(0deg)');
@@ -150,23 +239,32 @@ function randomizer(min, max) {
   		e.currentTarget.style = ('transform: rotateY('+rotateValue+'deg)')	;
 	
 	  	setTimeout(function(){
-	  		render(globalArray);
+	  		if (isPart) {
+	  			makeRandom(sources.currentArr);
+	  		}
+	  		else if(isAlphabet){
+	  			makeRandom(sources.currentArr);
+	  		}
+	  		else{
+
+	  		makeRandom(sources.globalArray);
+	  		}
 		  		
 			},100);
 	  	// console.log(e.target)
   })
 
-//   
-// 
+
+$('.part').on('click', function(e){
+	makePartition(sources.globalArray);
+	if (isPart) {isPart = false ;$('.part_number').remove()}
+	else{isPart = true;}
 
 
+});
 
-function getImg(key){
-	// var xhr2 = new XMLHttpRequest();
-
-	// xhr2.open('GET','text.json', true);
-	// xhr2.send();
-	// xhr2.onreadystatechange = function(){
-	// 	console.log(xhr2.responseText, 'xhr2');
-	// }
-}
+$('.alphabet').on('click', function(e){
+	makeAlphabet(sources.globalArray);
+	if (isAlphabet) {isAlphabet = false ;$('.alpha').remove()}
+	else{isAlphabet = true;}
+})
